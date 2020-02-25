@@ -18,6 +18,13 @@ Install the basic package with no extension
 # yum install unit
 ```
 
+# Run
+
+```bash
+$ systemctl enable unit
+$ systemctl start unit
+```
+
 # Main's files
 
 - (**Socket**) /var/run/unit/control.sock
