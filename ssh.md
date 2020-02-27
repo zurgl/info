@@ -39,3 +39,25 @@ ClientAliveCountMax 0
 Enjoy persistent ssh session 
 
 More info - [link](https://askubuntu.com/questions/127369/how-to-prevent-write-failed-broken-pipe-on-ssh-connection)
+
+
+### How to run a command
+
+Just put the command after ssh call
+
+```
+$ ssh user@domain killall vim
+```
+
+
+### How to start ssh connexion for another port
+
+Use -p option
+
+```
+$ ssh -p 1234 user@domain killall vim
+```
+
+
+
+
