@@ -29,7 +29,6 @@ mkdir .storybook src
 │   ├── Button.js
 │   └── Button.stories.js
 ├── .storybook
-│   ├── addons.js
 │   ├── config.js
 │   └── WelcomeStory.js
 └── yarn.lock
@@ -77,14 +76,41 @@ storiesOf('Button', module)
 
 ```
 
+##### **.storybook/config.js**
+```javascript
+//import { configure, setAddon } from '@storybook/react'
+//import JSXAddon from 'storybook-addon-jsx'
+//setAddon(JSXAddon)
+import { configure } from '@storybook/react'
+
+const req = require.context('../src', true, /.stories.js$/)
+
+function loadStories() {
+  require('./WelcomeStory');
+  req.keys().forEach(file => req(file));
+}
+
+configure(loadStories, module);
+```
+
+
+##### **.storybook/Welcome.js**
+```javascript
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+
+
+storiesOf('Main', module).add('Welcome', () => (
+  <h3>Welcome into my story</h3>
+))
+```
+
 
 ## Run example
-
 
 ```bash
 yarn storybook
 ```
-
 
 ## Addon not working to be tested
 
@@ -94,7 +120,10 @@ echo "" > .storybook/addons.js
 
 ```
 
-
+** ./.storybook/addons.js **
+```javascript
+import 'storybook-addon-jsx/register' 
+```
 
 
 -------
