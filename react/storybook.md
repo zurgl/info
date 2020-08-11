@@ -1,11 +1,11 @@
 Story Book
 -----
 
-## Purpose
+### Purpose
 
 Nice UI-component helper
 
-## Basic setup
+### Basic setup
 
 ```bash
 mkdir story-book
@@ -19,7 +19,7 @@ yarn add react react-dom
 mkdir .storybook src
 ```
 
-## Example folder tree
+### Example folder tree
 
 ```bash
 ~/r/story-book ❯❯❯ tree -aI node_modules
@@ -35,7 +35,7 @@ mkdir .storybook src
 ```
 
 
-## File content
+### File content
 
 ##### **package.json**
 ```
@@ -67,7 +67,7 @@ import { Button } from './Button'
 
 
 storiesOf('Button', module)
-  .addW('with background', () => (
+  .add('with background', () => (
   <Button bg="palegoldenrod">Hello World</Button>
 ))
   .add('with background-2', () => (
@@ -78,9 +78,6 @@ storiesOf('Button', module)
 
 ##### **.storybook/config.js**
 ```javascript
-//import { configure, setAddon } from '@storybook/react'
-//import JSXAddon from 'storybook-addon-jsx'
-//setAddon(JSXAddon)
 import { configure } from '@storybook/react'
 
 const req = require.context('../src', true, /.stories.js$/)
@@ -106,25 +103,21 @@ storiesOf('Main', module).add('Welcome', () => (
 ```
 
 
-## Run example
+### Run example
 
 ```bash
 yarn storybook
 ```
 
-## Addon not working to be tested
+### Addon not working to be tested
 
 ```bash
 yarn add -D @storybook/addons storybook-addon-jsx
-echo "" > .storybook/addons.js
+echo "import 'storybook-addon-jsx/register' " > .storybook/addons.js
 
 ```
 
-** ./.storybook/addons.js **
-```javascript
-import 'storybook-addon-jsx/register' 
-```
-
+to be continue ....
 
 -------
 ## More Info 
