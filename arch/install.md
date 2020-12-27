@@ -39,7 +39,6 @@ g
 ```
 n
 1
-.
 +550M
 .
 ```
@@ -53,8 +52,8 @@ t
 ```
 n
 2
-+2G
 .
++2G
 ```
 Partition type
 ```
@@ -69,7 +68,6 @@ n
 3
 .
 .
-
 ```
 
 ##### Write table 
@@ -86,7 +84,7 @@ mkfs.fat -F32 /dev/sda1
 
 ##### For swap
 ```
-mkfs.swap /dev/sda2
+mkswap /dev/sda2
 swapon /dev/sda2
 ```
 
@@ -149,7 +147,7 @@ EDITOR=nano visudo
 pacman -S grub efibootmgr dosfstools os-prober mtools
 mkdir /boot/EFI
 mount /dev/sda1 /boot/EFI
-gurb-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
+grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
