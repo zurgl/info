@@ -6,13 +6,21 @@
 
 
 ### Set keyboard layout
- ```
+```
 localectl set-keymap fr
+```
+Or
+```
+loadkeys fr-latin
 ```
 
 
-### Set keyboard layout
- ```
+### Set time server
+```
+timedatectl set-ntp true
+```
+and
+```
 timedatectl set-timezone Europe/Paris
 ```
 
@@ -85,7 +93,7 @@ mkfs.fat -F32 /dev/sda1
 ##### For swap
 ```
 mkswap /dev/sda2
-swapon /dev/sda2
+swapon 
 ```
 
 ##### For OS
