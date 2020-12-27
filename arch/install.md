@@ -118,7 +118,7 @@ arch-chroot /mnt
 ##### locale and time set-up
 ```
 ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime 
-hwclock -systohc
+hwclock --systohc
 pacman -S nano
 nano /etc/locale.gen
 locale-gen
