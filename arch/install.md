@@ -1,7 +1,7 @@
 ### Get basic stuff
 
 - [Download an iso](https://archlinux.org/download/)
-- [Install guide](https://wiki.archlinux.org/index.php/Installation_guide]
+- [Install guide](https://wiki.archlinux.org/index.php/Installation_guide)
 - Boot your image
 
 
