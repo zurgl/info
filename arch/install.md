@@ -101,7 +101,7 @@ pacstrap /mnt base linux linux-firmware
 
 ##### Generate filesystem table and chroot
 ```
-genfstab U /mnt >> /mnt/etc/fstab 
+genfstab -U /mnt >> /mnt/etc/fstab 
 arch-chroot /mnt
 ```
 
