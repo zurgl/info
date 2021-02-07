@@ -63,6 +63,6 @@ cv2.waitKey(5000)
 
 ```
 
-[more](https://github.com/JeremyMorgan/CPUMeminfo)
-[credit](https://www.jeremymorgan.com/tutorials/linux/how-to-opencv-arch-linux/)
-[youtube](https://www.youtube.com/watch?v=gH_kQZo-NSk&list=PLMoSUbG1Q_r_sc0x7ndCsqdIkL7dwrmNF&index=2)
+- [more](https://github.com/JeremyMorgan/CPUMeminfo)
+- [credit](https://www.jeremymorgan.com/tutorials/linux/how-to-opencv-arch-linux/)
+- [youtube](https://www.youtube.com/watch?v=gH_kQZo-NSk&list=PLMoSUbG1Q_r_sc0x7ndCsqdIkL7dwrmNF&index=2)
