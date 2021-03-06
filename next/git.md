@@ -1,6 +1,6 @@
 ### Stage to create a repository
 
-Configure `.gitignore`
+###### Configure `.gitignore`
 
 ```
 touch .gitignore
